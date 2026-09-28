@@ -3,206 +3,41 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mawww-AM — Aktivasi Manual</title>
+    <title>Mawww-AM — Alight Motion Premium Activator</title>
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', system-ui, sans-serif; }
-        
-        body {
-            background: linear-gradient(135deg, #0a1628 0%, #1a2942 50%, #0a1628 100%);
-            color: #e8f0ff;
-            min-height: 100vh;
-            padding: 20px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-        
+        body { background: linear-gradient(135deg, #0a1628 0%, #1a2942 50%, #0a1628 100%); color: #e8f0ff; min-height: 100vh; padding: 20px; display: flex; align-items: center; justify-content: center; }
         .container { max-width: 520px; width: 100%; }
-        
         .header { text-align: center; margin-bottom: 24px; }
-        .logo {
-            font-size: 48px;
-            margin-bottom: 8px;
-            filter: drop-shadow(0 0 20px rgba(59, 130, 246, 0.5));
-        }
-        .header h1 {
-            font-size: 32px;
-            background: linear-gradient(90deg, #50aaff, #7dd3fc, #50aaff);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            font-weight: 800;
-            margin-bottom: 4px;
-        }
+        .logo { font-size: 48px; margin-bottom: 8px; filter: drop-shadow(0 0 20px rgba(59, 130, 246, 0.5)); }
+        .header h1 { font-size: 32px; background: linear-gradient(90deg, #50aaff, #7dd3fc, #50aaff); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; font-weight: 800; margin-bottom: 4px; }
         .header p { color: #7a9bc4; font-size: 13px; }
-        
-        .card {
-            background: rgba(20, 32, 52, 0.85);
-            backdrop-filter: blur(10px);
-            border: 1.5px solid #3b82f6;
-            border-radius: 16px;
-            padding: 24px;
-            box-shadow: 0 8px 32px rgba(59, 130, 246, 0.2);
-            margin-bottom: 16px;
-        }
-        .card h2 {
-            font-size: 16px;
-            color: #60a5fa;
-            margin-bottom: 16px;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            font-weight: 700;
-        }
-        
+        .card { background: rgba(20, 32, 52, 0.85); backdrop-filter: blur(10px); border: 1.5px solid #3b82f6; border-radius: 16px; padding: 24px; box-shadow: 0 8px 32px rgba(59, 130, 246, 0.2); margin-bottom: 16px; }
+        .card h2 { font-size: 16px; color: #60a5fa; margin-bottom: 16px; text-transform: uppercase; letter-spacing: 1px; font-weight: 700; }
+        .steps { display: flex; gap: 8px; margin-bottom: 16px; }
+        .step { flex: 1; padding: 8px; text-align: center; font-size: 11px; font-weight: 700; background: rgba(13, 27, 46, 0.6); border: 1px solid #2a4a6f; border-radius: 8px; color: #7a9bc4; }
+        .step.active { background: rgba(59, 130, 246, 0.25); color: #7dd3fc; border-color: #3b82f6; }
         .form-group { margin-bottom: 14px; }
-        .form-group label {
-            display: block;
-            font-size: 12px;
-            color: #7a9bc4;
-            margin-bottom: 6px;
-            font-weight: 600;
-        }
-        .form-group input, .form-group textarea {
-            width: 100%;
-            padding: 12px 14px;
-            background: #0d1b2e;
-            border: 1px solid #2a4a6f;
-            border-radius: 8px;
-            color: #a5d8ff;
-            font-size: 13px;
-            outline: none;
-            font-family: inherit;
-            transition: all 0.2s;
-        }
-        .form-group input:focus, .form-group textarea:focus {
-            border-color: #3b82f6;
-            box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.15);
-        }
-        .form-group textarea { resize: vertical; min-height: 60px; }
-        
-        .btn {
-            padding: 14px 20px;
-            font-size: 14px;
-            font-weight: 700;
-            border: none;
-            border-radius: 10px;
-            cursor: pointer;
-            transition: all 0.2s;
-            font-family: inherit;
-            width: 100%;
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            gap: 8px;
-            text-decoration: none;
-            letter-spacing: 0.3px;
-        }
+        .form-group label { display: block; font-size: 12px; color: #7a9bc4; margin-bottom: 6px; font-weight: 600; }
+        .form-group input, .form-group textarea { width: 100%; padding: 12px 14px; background: #0d1b2e; border: 1px solid #2a4a6f; border-radius: 8px; color: #a5d8ff; font-size: 13px; outline: none; transition: all 0.2s; }
+        .form-group input:focus, .form-group textarea:focus { border-color: #3b82f6; box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.15); }
+        .form-group textarea { resize: vertical; min-height: 80px; font-family: monospace; }
+        .btn { padding: 14px 20px; font-size: 14px; font-weight: 700; border: none; border-radius: 10px; cursor: pointer; transition: all 0.2s; width: 100%; display: inline-flex; align-items: center; justify-content: center; gap: 8px; text-decoration: none; letter-spacing: 0.3px; }
         .btn:hover { transform: translateY(-2px); }
         .btn:active { transform: translateY(0); }
-        .btn-primary {
-            background: linear-gradient(135deg, #2563eb, #3b82f6);
-            color: white;
-            box-shadow: 0 4px 16px rgba(59, 130, 246, 0.4);
-        }
-        .btn-primary:hover { box-shadow: 0 6px 24px rgba(59, 130, 246, 0.6); }
-        .btn-wa {
-            background: linear-gradient(135deg, #25D366, #128C7E);
-            color: white;
-            box-shadow: 0 4px 16px rgba(37, 211, 102, 0.4);
-            margin-top: 10px;
-        }
-        .btn-wa:hover { box-shadow: 0 6px 24px rgba(37, 211, 102, 0.6); }
-        
-        .alert {
-            padding: 12px 16px;
-            border-radius: 10px;
-            font-size: 13px;
-            margin-top: 14px;
-            display: none;
-            line-height: 1.5;
-        }
+        .btn:disabled { opacity: 0.5; cursor: not-allowed; transform: none; }
+        .btn-primary { background: linear-gradient(135deg, #2563eb, #3b82f6); color: white; box-shadow: 0 4px 16px rgba(59, 130, 246, 0.4); }
+        .btn-primary:hover:not(:disabled) { box-shadow: 0 6px 24px rgba(59, 130, 246, 0.6); }
+        .btn-success { background: linear-gradient(135deg, #059669, #10b981); color: white; box-shadow: 0 4px 16px rgba(16, 185, 129, 0.4); }
+        .btn-secondary { background: rgba(59, 130, 246, 0.15); color: #7dd3fc; border: 1px solid #3b82f6; }
+        .alert { padding: 12px 16px; border-radius: 10px; font-size: 13px; margin-top: 14px; display: none; line-height: 1.5; }
         .alert.show { display: block; }
-        .alert.success {
-            background: rgba(16, 185, 129, 0.15);
-            border: 1px solid rgba(16, 185, 129, 0.4);
-            color: #80ffb0;
-        }
-        .alert.error {
-            background: rgba(255, 100, 100, 0.15);
-            border: 1px solid rgba(255, 100, 100, 0.4);
-            color: #ff8080;
-        }
-        .alert.info {
-            background: rgba(59, 130, 246, 0.15);
-            border: 1px solid rgba(59, 130, 246, 0.4);
-            color: #7dd3fc;
-        }
-        
-        .status-badge {
-            display: inline-block;
-            padding: 4px 12px;
-            border-radius: 20px;
-            font-size: 11px;
-            font-weight: 700;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-        }
-        .status-pending { background: rgba(255, 200, 100, 0.2); color: #ffd066; border: 1px solid #ffd066; }
-        .status-processing { background: rgba(100, 180, 255, 0.2); color: #7dd3fc; border: 1px solid #7dd3fc; }
-        .status-approved { background: rgba(100, 255, 150, 0.2); color: #80ffb0; border: 1px solid #80ffb0; }
-        .status-rejected { background: rgba(255, 100, 100, 0.2); color: #ff8080; border: 1px solid #ff8080; }
-        
-        .tabs {
-            display: flex;
-            gap: 6px;
-            margin-bottom: 16px;
-            background: rgba(13, 27, 46, 0.6);
-            padding: 4px;
-            border-radius: 10px;
-            border: 1px solid #2a4a6f;
-        }
-        .tab {
-            flex: 1;
-            padding: 10px;
-            text-align: center;
-            font-size: 12px;
-            font-weight: 700;
-            cursor: pointer;
-            color: #7a9bc4;
-            border-radius: 7px;
-            transition: all 0.2s;
-            text-transform: uppercase;
-            letter-spacing: 0.3px;
-        }
-        .tab.active {
-            background: rgba(59, 130, 246, 0.25);
-            color: #7dd3fc;
-        }
-        .tab:hover:not(.active) { color: #a5d8ff; }
-        
+        .alert.success { background: rgba(16, 185, 129, 0.15); border: 1px solid rgba(16, 185, 129, 0.4); color: #80ffb0; }
+        .alert.error { background: rgba(255, 100, 100, 0.15); border: 1px solid rgba(255, 100, 100, 0.4); color: #ff8080; }
+        .alert.info { background: rgba(59, 130, 246, 0.15); border: 1px solid rgba(59, 130, 246, 0.4); color: #7dd3fc; }
         .panel { display: none; }
         .panel.active { display: block; }
-        
-        .contact {
-            text-align: center;
-            margin-top: 20px;
-            padding-top: 20px;
-            border-top: 1px solid #2a4a6f;
-        }
-        .contact p { font-size: 12px; color: #7a9bc4; margin-bottom: 8px; }
-        
-        .footer {
-            text-align: center;
-            font-size: 11px;
-            color: #556b8a;
-            margin-top: 16px;
-        }
-        
-        @media (max-width: 480px) {
-            .header h1 { font-size: 26px; }
-            .logo { font-size: 40px; }
-            .card { padding: 18px; }
-        }
+        .footer { text-align: center; font-size: 11px; color: #556b8a; margin-top: 16px; }
     </style>
 </head>
 <body>
@@ -210,77 +45,63 @@
         <div class="header">
             <div class="logo">⚡</div>
             <h1>Mawww-AM</h1>
-            <p>Manual Activation Service</p>
+            <p>Alight Motion Premium Activator</p>
         </div>
-        
-        <div class="tabs">
-            <div class="tab active" onclick="switchTab(this, 'request')">📝 Request</div>
-            <div class="tab" onclick="switchTab(this, 'status')">🔍 Cek Status</div>
-        </div>
-        
-        <div class="panel active" id="panel-request">
-            <div class="card">
-                <h2>📝 Form Request Aktivasi</h2>
-                
+
+        <div class="card">
+            <h2>🚀 Aktivasi Premium</h2>
+
+            <div class="steps">
+                <div class="step active" id="step1">1. Email</div>
+                <div class="step" id="step2">2. Verifikasi</div>
+                <div class="step" id="step3">3. Selesai</div>
+            </div>
+
+            <!-- STEP 1 -->
+            <div class="panel active" id="panel1">
                 <div class="form-group">
-                    <label>📧 Email</label>
+                    <label>📧 Email Alight Motion kamu</label>
                     <input type="email" id="email" placeholder="contoh@gmail.com">
                 </div>
-                
-                <div class="form-group">
-                    <label>📱 WhatsApp Aktif</label>
-                    <input type="tel" id="whatsapp" placeholder="08xxxxxxxxxx">
-                </div>
-                
-                <div class="form-group">
-                    <label>📝 Catatan (opsional)</label>
-                    <textarea id="note" placeholder="Info tambahan untuk owner..."></textarea>
-                </div>
-                
-                <button class="btn btn-primary" onclick="submitRequest()">
-                    🚀 Kirim Request
+                <button class="btn btn-primary" id="btnSend" onclick="sendLink()">
+                    📩 Kirim Magic Link
                 </button>
-                
-                <div class="alert" id="alertRequest"></div>
-                
-                <div class="contact">
-                    <p>Ada pertanyaan? Hubungi owner langsung:</p>
-                    <a href="https://wa.me/62895618962380" target="_blank" class="btn btn-wa">
-                        💬 Chat Owner via WhatsApp
-                    </a>
+                <div class="alert" id="alert1"></div>
+            </div>
+
+            <!-- STEP 2 -->
+            <div class="panel" id="panel2">
+                <div class="form-group">
+                    <label>🔗 Paste link dari email</label>
+                    <textarea id="link" placeholder="https://alight-creative.firebaseapp.com/verify?oobCode=..."></textarea>
                 </div>
+                <button class="btn btn-success" id="btnActivate" onclick="activate()">
+                    ✅ Aktifkan Premium
+                </button>
+                <button class="btn btn-secondary" onclick="backToStep1()" style="margin-top:8px;">
+                    ← Kembali
+                </button>
+                <div class="alert" id="alert2"></div>
+            </div>
+
+            <!-- STEP 3 -->
+            <div class="panel" id="panel3">
+                <div class="alert success show" id="alert3"></div>
+                <button class="btn btn-primary" onclick="location.reload()" style="margin-top:12px;">
+                    🔄 Aktivasi Lagi
+                </button>
             </div>
         </div>
-        
-        <div class="panel" id="panel-status">
-            <div class="card">
-                <h2>🔍 Cek Status Request</h2>
-                
-                <div class="form-group">
-                    <label>📧 Email yang didaftarkan</label>
-                    <input type="email" id="checkEmail" placeholder="contoh@gmail.com">
-                </div>
-                
-                <button class="btn btn-primary" onclick="checkStatus()">
-                    🔍 Cek Status
-                </button>
-                
-                <div class="alert" id="alertStatus"></div>
-                <div id="statusResult"></div>
-            </div>
-        </div>
-        
+
         <div class="footer">
-            © 2026 Mawww-AM — All rights reserved
+            © 2026 Mawww-AM — Unofficial tool, use at your own risk
         </div>
     </div>
 
     <script>
-        function switchTab(el, type) {
-            document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
-            document.querySelectorAll('.panel').forEach(p => p.classList.remove('active'));
-            el.classList.add('active');
-            document.getElementById('panel-' + type).classList.add('active');
+        function showPanel(n) {
+            document.querySelectorAll('.panel').forEach((p, i) => p.classList.toggle('active', i === n - 1));
+            document.querySelectorAll('.step').forEach((s, i) => s.classList.toggle('active', i < n));
         }
 
         function showAlert(id, msg, type) {
@@ -293,109 +114,84 @@
             document.getElementById(id).className = 'alert';
         }
 
-        async function submitRequest() {
+        async function sendLink() {
             const email = document.getElementById('email').value.trim();
-            const whatsapp = document.getElementById('whatsapp').value.trim();
-            const note = document.getElementById('note').value.trim();
-            
-            if (!email || !whatsapp) {
-                showAlert('alertRequest', '❌ Email dan WhatsApp wajib diisi!', 'error');
+            if (!email) {
+                showAlert('alert1', '❌ Masukkan email dulu!', 'error');
                 return;
             }
-            
-            showAlert('alertRequest', '⏳ Mengirim request...', 'info');
-            
+
+            const btn = document.getElementById('btnSend');
+            btn.disabled = true;
+            btn.textContent = '⏳ Mengirim...';
+            showAlert('alert1', '⏳ Mengirim magic link...', 'info');
+
             try {
-                const res = await fetch('/api/request', {
+                const res = await fetch('/api/send-link', {
                     method: 'POST',
                     headers: { 'Content-Type': 'application/json' },
-                    body: JSON.stringify({ email, whatsapp, note })
+                    body: JSON.stringify({ email })
                 });
                 const data = await res.json();
-                
+
                 if (data.ok) {
-                    showAlert('alertRequest', 
-                        `✅ Request berhasil! ID: #${data.requestId}. Silakan kirim konfirmasi ke owner via WhatsApp dengan klik tombol di bawah.`, 
-                        'success'
-                    );
-                    
-                    const contactDiv = document.querySelector('.contact');
-                    let existingWa = document.getElementById('waConfirmBtn');
-                    if (existingWa) existingWa.remove();
-                    
-                    const waBtn = document.createElement('a');
-                    waBtn.id = 'waConfirmBtn';
-                    waBtn.href = data.waLink;
-                    waBtn.target = '_blank';
-                    waBtn.className = 'btn btn-wa';
-                    waBtn.innerHTML = '📤 Kirim Konfirmasi ke Owner';
-                    waBtn.style.marginTop = '12px';
-                    contactDiv.insertBefore(waBtn, contactDiv.firstChild);
-                    
-                    document.getElementById('email').value = '';
-                    document.getElementById('whatsapp').value = '';
-                    document.getElementById('note').value = '';
+                    showAlert('alert1', '✅ ' + data.msg, 'success');
+                    setTimeout(() => {
+                        showPanel(2);
+                        hideAlert('alert1');
+                    }, 1500);
                 } else {
-                    showAlert('alertRequest', '❌ ' + data.msg, 'error');
+                    showAlert('alert1', '❌ ' + data.msg, 'error');
+                    btn.disabled = false;
+                    btn.textContent = '📩 Kirim Magic Link';
                 }
             } catch (e) {
-                showAlert('alertRequest', '❌ Error: ' + e.message, 'error');
+                showAlert('alert1', '❌ Error: ' + e.message, 'error');
+                btn.disabled = false;
+                btn.textContent = '📩 Kirim Magic Link';
             }
         }
 
-        async function checkStatus() {
-            const email = document.getElementById('checkEmail').value.trim();
-            if (!email) {
-                showAlert('alertStatus', '❌ Masukkan email dulu!', 'error');
+        async function activate() {
+            const email = document.getElementById('email').value.trim();
+            const link = document.getElementById('link').value.trim();
+            if (!link) {
+                showAlert('alert2', '❌ Paste link dari email dulu!', 'error');
                 return;
             }
-            
-            hideAlert('alertStatus');
-            document.getElementById('statusResult').innerHTML = '<div style="text-align:center;color:#7a9bc4;padding:20px;">⏳ Loading...</div>';
-            
+
+            const btn = document.getElementById('btnActivate');
+            btn.disabled = true;
+            btn.textContent = '⏳ Mengaktifkan...';
+            showAlert('alert2', '⏳ Memverifikasi & mengaktifkan premium...', 'info');
+
             try {
-                const res = await fetch('/api/status?email=' + encodeURIComponent(email));
+                const res = await fetch('/api/activate', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ email, link })
+                });
                 const data = await res.json();
-                
-                if (!data.ok) {
-                    showAlert('alertStatus', '❌ ' + data.msg, 'error');
-                    document.getElementById('statusResult').innerHTML = '';
-                    return;
+
+                if (data.ok) {
+                    showAlert('alert3', '🎉 ' + data.msg + '<br><br>📧 Email: ' + data.session.email + '<br>🆔 Order ID: ' + data.session.orderId, 'success');
+                    showPanel(3);
+                } else {
+                    showAlert('alert2', '❌ ' + data.msg, 'error');
+                    btn.disabled = false;
+                    btn.textContent = '✅ Aktifkan Premium';
                 }
-                
-                const r = data.request;
-                const statusLabel = {
-                    pending: '⏳ Menunggu',
-                    processing: '⚙️ Diproses',
-                    approved: '✅ Disetujui',
-                    rejected: '❌ Ditolak'
-                }[r.status];
-                
-                const date = new Date(r.createdAt).toLocaleString('id-ID');
-                
-                document.getElementById('statusResult').innerHTML = `
-                    <div style="margin-top:16px;padding:16px;background:rgba(13,27,46,0.6);border:1px solid #2a4a6f;border-radius:10px;">
-                        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;">
-                            <span style="color:#7a9bc4;font-size:12px;">ID: #${r.id}</span>
-                            <span class="status-badge status-${r.status}">${statusLabel}</span>
-                        </div>
-                        <div style="font-size:12px;color:#a5d8ff;line-height:1.8;">
-                            <div>📧 <b>Email:</b> ${r.email}</div>
-                            <div>📱 <b>WA:</b> ${r.whatsapp}</div>
-                            <div>📅 <b>Tanggal:</b> ${date}</div>
-                            ${r.note ? `<div>📝 <b>Note:</b> ${r.note}</div>` : ''}
-                        </div>
-                    </div>
-                `;
             } catch (e) {
-                showAlert('alertStatus', '❌ Error: ' + e.message, 'error');
-                document.getElementById('statusResult').innerHTML = '';
+                showAlert('alert2', '❌ Error: ' + e.message, 'error');
+                btn.disabled = false;
+                btn.textContent = '✅ Aktifkan Premium';
             }
         }
 
-        document.getElementById('checkEmail').addEventListener('keypress', function(e) {
-            if (e.key === 'Enter') checkStatus();
-        });
+        function backToStep1() {
+            showPanel(1);
+            hideAlert('alert2');
+        }
     </script>
 </body>
-  </html>
+</html>
